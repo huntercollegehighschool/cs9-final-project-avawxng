@@ -3,11 +3,13 @@ Name(s): Ava Wong
 Name of Project: "Regrets: The End of the World"
 """
 
-#Write the main part of your program here. Use of the other pages is optional.
-#the beginning
+#The only page! I would use the others to make the code prettier, but I'm not quite sure how to move between them, as my choices are heavily intertwined :)
+
 
 import os
 import time
+
+#the beginning
 
 def start(): 
   print("You wake up. Eyes blinking open, you register your bedroom— closed curtains, desk, and everything. It's still dark outside.")
@@ -49,7 +51,7 @@ def choicebreakfast():
     decisionbreakfast = input("Press C to check your phone, and W to wait for your eggs: ")
   
   if decisionbreakfast == "C":
-    choice2callsomeone()
+    choicecheck()
   elif decisionbreakfast == "W": 
     choicewaitingforegg()
 
@@ -63,7 +65,7 @@ def choicecheck():
   while decisioncheck != "L" and decisioncheck != "C": 
     print("Not a valid answer.")
     decisioncheck = input("Press L to leave your house or C to call someone: ")
-    
+
   if decisioncheck == "L": 
     choice2leavehouse()
   elif decisioncheck == "C":
@@ -145,7 +147,7 @@ def choiceturnontv():
 #Option 2: Calling a friend about it to ask them
 def choice2callsomeone(): 
   os.system('clear')
-  print("It's the end of the world! Panicking, all you can think of is that you need to call someone, right now.")
+  print("It's the end of the world! All you can think of is that you need to call someone, right now.")
   time.sleep(3)
   print()
   decisionwhotocall = input("Press M to call your mother, and F to call your friend: ")
@@ -180,7 +182,7 @@ def choicemom():
 
 def choicefriend():
   os.system('clear')
-  print("In your panic, you choose to call your friend. It's the end of the world! What are you supposed to do at the end of the world?! There's no guide for that.")
+  print("In your panic, you choose to call your friend. Your friend is a reliable person— they always know what they're talking about, and so they're who your mind goes to, to find a way to stay alive.")
   time.sleep(3.5)
   print()
   print("You and your friend have a quick conversation. At the end, your friend tells you: I've heard that there's some sort of ship leaving the Earth at 1pm. If you meet me on Main Street, by my apartment, maybe we can get there together!")
@@ -203,7 +205,7 @@ def choicefriend():
 #Option 3: Leaving your house and lookin around/confused
 def choice2leavehouse(): 
   os.system('clear')
-  print("In your panic at the end of the world, you dash out of your apartment, not even stopping to properly close your door. You rush down your stairs, and run out onto the street.")
+  print("In your panic, you dash out of your apartment, not even stopping to properly close your door. You rush down your stairs, and run out onto the street.")
   time.sleep(4.5)
   print()
   print("There's a hoard of people outside— chaos everywhere as cars flood the streets, people in utter dissarray.")
@@ -228,13 +230,13 @@ def choice2leavehouse():
 
 def choicemeetfriend(): 
   os.system('clear')
-  print("Yur best friend! You have to find them.")
+  print("Your best friend! You have to find them.")
   time.sleep(2)
   print()
-  print("You run a couple streets down, to the block where you know your friend lives. In the chaos— the rush of people, the honking cars, the cracked sky, you notice your friend.")
+  print("You run a couple streets down, to the block where you know your friend should be. In the chaos— the rush of people, the honking cars, the cracked sky, you notice your friend.")
   time.sleep(3.5)
   print()
-  print("The two of you converse, and your friend fills you in on all their details, of how the two of you should escape together.")
+  print("The two of you converse, and your friend fills you in on all the details, of how the two of you should escape together.")
   time.sleep(3.5)
   print()
   decisionmeetfriend = input("Press K to keep going: ")
@@ -244,16 +246,13 @@ def choicemeetfriend():
     decisionmeetfriend = input("Press K to keep going: ")
   
   if decisionmeetfriend == "K": 
-    choiceicantdothis()
-
-def choiceicantdothis():
-  os.system('clear')
-  print("As you keep running, you and your friend out of breath, no ship in sight, it's clear. The two of you... aren't gonna make it.")
-  time.sleep(3)
-  print()
-  print("Whether your friend's ship was real or not... it took too much time trying to get there.")
-  time.sleep (2)
-  choicebeforetheend()
+    os.system('clear')
+    print("As you keep running, you and your friend out of breath, no ship in sight, it's clear. The two of you... aren't gonna make it.")
+    time.sleep(3)
+    print()
+    print("Whether your friend's ship was real or not... it took too much time trying to get there.")
+    time.sleep (2)
+    choicebeforetheend()
 
 def choicerun():
   os.system('clear')
@@ -391,9 +390,3 @@ start()
 
 
 
-
-
-#import page1  # uncomment if you're using page1
-#import page2  # uncomment if you're using page2
-#import page3  # uncomment if you're using page3
-#import page4  # uncomment if you're using page4
