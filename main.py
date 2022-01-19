@@ -387,6 +387,3 @@ def endofworld():
 
 #the run command
 start()
-
-
-
